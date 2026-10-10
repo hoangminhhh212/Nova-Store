@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101a36">
+<meta name="description" content="Nova Store - khám phá những sản phẩm bạn yêu thích.">
+<title>Nova Store | Mua sắm tinh gọn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Nova Store trang chủ"><span class="brand-mark">N<span>✦</span></span><span>nova<span class="brand-light">store</span></span></a>
+  <nav class="desktop-nav"><a href="#home" class="nav-link active">Trang chủ</a><a href="#products" class="nav-link">Sản phẩm</a><a href="#about" class="nav-link">Về Nova</a></nav>
+  <div class="top-actions"><button class="icon-button search-toggle" aria-label="Tìm kiếm" title="Tìm kiếm">⌕</button><button class="cart-button" id="open-cart"><span>Giỏ hàng</span><span class="cart-count" id="cart-count">0</span></button><button class="menu-toggle" id="menu-toggle" aria-label="Mở menu">☰</button></div>
+</header>
+<div class="mobile-menu" id="mobile-menu"><a href="#home">Trang chủ</a><a href="#products">Sản phẩm</a><a href="#about">Về Nova</a></div>
+<main>
+<section class="hero section-wrap" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse-dot"></span> MỘT CHẤT RIÊNG, MỘT LỰA CHỌN MỚI</div>
+    <h1>Chọn điều hay.<br><span class="gradient-text">Sống chất riêng.</span></h1>
+    <p>Khám phá những món đồ hợp gu, mức giá dễ chịu và trải nghiệm mua sắm gọn gàng tại Nova Store.</p>
+    <div class="hero-actions"><a class="primary-button" href="#products">Khám phá ngay <span>↗</span></a><a class="text-button" href="#about">Tìm hiểu Nova <span>→</span></a></div>
+    <div class="hero-proof"><div class="avatar-stack"><span>N</span><span>✦</span><span>♡</span></div><div><strong>Gu của bạn, lựa chọn của bạn</strong><small>Không cần ồn ào để nổi bật.</small></div></div>
+  </div>
+  <div class="hero-art">
+    <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+    <div class="hero-card card-back"><span class="tiny-label">NOVA / SELECT</span><div class="orb orb-purple"></div></div>
+    <div class="hero-card card-front"><div class="card-topline"><span>THE NOVA EDIT</span><span>✦ 01</span></div><div class="hero-glyph">N<span>✦</span></div><div class="card-bottomline"><span>FIND YOUR NEXT</span><span>2026</span></div></div>
+    <div class="float-pill float-left"><span class="float-icon">✧</span><span><strong>Made for you</strong><small>Chọn theo cách riêng</small></span></div>
+    <div class="float-pill float-right"><span class="float-icon purple-icon">↗</span><span><strong>Fresh finds</strong><small>Thêm điều thú vị</small></span></div>
+    <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+  </div>
+</section>
+<section class="trust-strip section-wrap"><div><span class="trust-icon">◇</span><span><strong>Chọn món dễ dàng</strong><small>Giao diện gọn gàng</small></span></div><div><span class="trust-icon">♡</span><span><strong>Đặt hàng tiện lợi</strong><small>Chỉ cần tên của bạn</small></span></div><div><span class="trust-icon">✦</span><span><strong>Luôn theo gu riêng</strong><small>Nova, made simple</small></span></div></section>
+<section class="products-section section-wrap" id="products">
+  <div class="section-heading"><div><div class="eyebrow">THE NOVA COLLECTION</div><h2>Món hay đang chờ <span class="gradient-text">cậu.</span></h2><p>Thêm sản phẩm vào tệp data.js để bắt đầu trưng bày.</p></div><button class="filter-button" id="clear-search">↻ <span>Hiện tất cả</span></button></div>
+  <div class="search-row"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Tìm món đồ bạn đang nghĩ đến..." autocomplete="off"><kbd>⌘ K</kbd></label><div class="results-label" id="results-label">0 sản phẩm</div></div>
+  <div class="category-row" id="category-row"><button class="category-chip selected" data-category="Tất cả">Tất cả</button></div>
+  <div class="product-grid" id="product-grid"></div>
+  <div class="empty-state" id="empty-state"><div class="empty-orb">✧</div><h3>Kệ hàng đang đợi những món đầu tiên</h3><p>Danh sách sản phẩm hiện đang để trống theo thiết lập của cậu.</p></div>
+</section>
+<section class="closing section-wrap" id="about"><div class="closing-orb">N<span>✦</span></div><div><div class="eyebrow">WELCOME TO NOVA</div><h2>Ít phức tạp hơn.<br><span class="gradient-text">Nhiều chất riêng hơn.</span></h2><p>Nova Store được tạo để việc tìm và đặt món bạn thích trở nên đơn giản.</p></div><a class="round-arrow" href="#home" aria-label="Lên đầu trang">↑</a></section>
+</main>
+<footer class="footer section-wrap"><a class="brand" href="#"><span class="brand-mark">N<span>✦</span></span><span>nova<span class="brand-light">store</span></span></a><span>© <span id="year"></span> Nova Store. Made with a little sparkle.</span><a href="#home">Trở về đầu trang ↑</a></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Giỏ hàng" aria-hidden="true"><div class="drawer-head"><div><div class="eyebrow">YOUR SELECTION</div><h2>Giỏ hàng <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Đóng">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>♡</span><h3>Giỏ hàng đang trống</h3><p>Món đồ hợp gu đang đợi cậu chọn đó.</p><button class="primary-button" id="continue-shopping">Khám phá sản phẩm</button></div><div class="cart-summary" id="cart-summary"><div class="total-line"><span>Tạm tính</span><strong id="cart-total">0 ₫</strong></div><button class="primary-button checkout-button" id="checkout-button">Đặt hàng <span>↗</span></button><small>Đơn hàng sẽ được gửi để cửa hàng xử lý.</small></div></aside>
+<div class="modal-wrap" id="checkout-modal" aria-hidden="true"><div class="checkout-modal"><div class="modal-heading"><div><div class="eyebrow">ONE LAST STEP</div><h2>Hoàn tất đơn hàng</h2><p>Cho Nova biết cậu tên gì nhé.</p></div><button class="close-button" id="close-checkout" aria-label="Đóng">×</button></div><form id="checkout-form"><label for="buyer-name">Tên người mua</label><input id="buyer-name" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Tên của cậu"><div class="order-preview" id="order-preview"></div><div class="form-error" id="form-error" role="alert"></div><button class="primary-button submit-order" id="submit-order" type="submit">Gửi đơn hàng <span>↗</span></button><p class="privacy-note">Thông tin chỉ được dùng để tiếp nhận đơn hàng.</p></form></div></div>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>
